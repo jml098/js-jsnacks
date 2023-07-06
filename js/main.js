@@ -95,6 +95,26 @@ function insertInDOM(result) {
 
 // BONUS:
 
+
+// BONUS 2:
+// Chiedi un numero di 4 cifre all’utente. 
+// Usa la funzione sommaNumeri per calcolare la somma di tutte le cifre che compongono il numero e ritorni il risultato. 
+// Usa questa funzione per stampare poi a video il risultato ottenuto. 
+// Ad es: 1286 la somma di tutti le sue cifre sarà 17!
+
+function bonus2() {
+    const userNumber = prompt("Inserisci un numero.").replace(" ", "")
+    const numbersArray = userNumber.split("");
+    
+    for (let i = 0; i < numbersArray.length; i++) {
+         numbersArray[i] = parseInt(numbersArray[i]); 
+    }
+
+    const numbersSum = sommaNumeri(numbersArray)
+
+    return "La somma dei numeri di " + userNumber + " è " + numbersSum;
+}
+
 // BONUS 3:
 // Creare una funzione che dato un array di stringhe o di numeri mi restituisca il numero di volte 
 // che un elemento è presente dentro quell'array. 
