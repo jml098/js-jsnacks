@@ -76,7 +76,12 @@ function generateArrayFromInputs(n, promptMessage) {
 }
 
 
-
-console.log(milestone1())
-
-console.log(milestone2())
+/**
+ * Inserisce nel DOM il risultato di una funzione.
+ *
+ * @param {any} result - Quantità di numeri da inserire.
+ * @returns {void}
+ */
+function insertInDOM(result) {
+    document.getElementById("result").innerHTML = result
+}
