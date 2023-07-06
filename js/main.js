@@ -9,15 +9,9 @@
 
 function milestone1() {
 
-    const userNumbers = [];
     const arrayLength = parseInt(prompt("Quanti numeri vuoi inserire?"))
-
-    for (let i = 0; i < arrayLength; i++) {
-        userNumbers.push(parseInt(prompt("Inserisci un numero.")))
-    }
-
+    const userNumbers = generateArrayFromInputs(arrayLength, "Inserisci il numero da inserire.")
     const sumOfNumbers = sommaNumeri(userNumbers);
-    console.log(sumOfNumbers)
 
     return sumOfNumbers;
 }
@@ -30,10 +24,12 @@ function milestone1() {
 // Potete ad esempio provare ad usare questo programma per inserire N voti di scuola e farvi restituire qual è la media di tutti i voti inseriti!
 
 function milestone2() {
+    const arrayLength = parseInt(prompt("Quanti numeri vuoi inserire?"))
+    const userNumbers = generateArrayFromInputs(arrayLength, "Inserisci il numero da inserire.")
+    const mediaAritmeticaOfNumbers = mediaAritmetica(userNumbers);
 
+    return mediaAritmeticaOfNumbers;
 }
-
-
 
 
 // Functions //
@@ -51,4 +47,29 @@ function sommaNumeri(array) {
         sum += number;
     }
     return sum;
+}
+
+/**
+ * Prende un'array e calcola la media dei numeri presenti in essa.
+ *
+ * @param {Array<Number>} array - L'array da cui calcolare la media dei numeri.
+ * @returns {Number} La media dei numeri nell'array.
+ */
+function mediaAritmetica(array) {
+    return sommaNumeri() / array.length;
+}
+
+/**
+ * Genera un'array di N numeri inseriti dall'utente tramite prompts.
+ *
+ * @param {Number} n - Quantità di numeri da inserire.
+ * @param {String} promptMessage - Testo visualizzato all'inserimento del numero.
+ * @returns {Array<Number>} Array con i numeri inseriti.
+ */
+function generateArrayFromInputs(n, promptMessage) {
+    const array = [];
+    for (let i = 0; i < n; i++) {
+        array.push(parseInt(prompt(promptMessage)))
+    }
+    return array;
 }
