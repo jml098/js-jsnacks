@@ -8,6 +8,14 @@
 // e poi facendogli inserire questi N numeri all'utente stesso tramite apposito prompt().
 
 
+
+
+/**
+ * Prende un'array e calcola la somma dei numeri presenti in essa.
+ *
+ * @param {Array<Number>} array - L'array da cui calcolare la somma dei numeri.
+ * @returns {Number} La somma dei numeri nell'array.
+ */
 function sommaNumeri(array) {
     let sum = 0;
     for (let i = 0; i < array.length; i++) {
