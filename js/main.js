@@ -24,6 +24,7 @@ function milestone1() {
 // Potete ad esempio provare ad usare questo programma per inserire N voti di scuola e farvi restituire qual è la media di tutti i voti inseriti!
 
 function milestone2() {
+
     const arrayLength = parseInt(prompt("Quanti numeri vuoi inserire?"))
     const userNumbers = generateArrayFromInputs(arrayLength, "Inserisci il numero da inserire.")
     const mediaAritmeticaOfNumbers = mediaAritmetica(userNumbers);
@@ -56,7 +57,7 @@ function sommaNumeri(array) {
  * @returns {Number} La media dei numeri nell'array.
  */
 function mediaAritmetica(array) {
-    return sommaNumeri() / array.length;
+    return sommaNumeri(array) / array.length;
 }
 
 /**
@@ -73,3 +74,9 @@ function generateArrayFromInputs(n, promptMessage) {
     }
     return array;
 }
+
+
+
+console.log(milestone1())
+
+console.log(milestone2())
