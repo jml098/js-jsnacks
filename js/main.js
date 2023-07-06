@@ -20,21 +20,6 @@ function milestone1() {
     console.log(sumOfNumbers)
 
     return sumOfNumbers;
-
-    /**
-     * Prende un'array e calcola la somma dei numeri presenti in essa.
-     *
-     * @param {Array<Number>} array - L'array da cui calcolare la somma dei numeri.
-     * @returns {Number} La somma dei numeri nell'array.
-     */
-    function sommaNumeri(array) {
-        let sum = 0;
-        for (let i = 0; i < array.length; i++) {
-            const number = array[i];
-            sum += number;
-        }
-        return sum;
-    }
 }
 
 
@@ -45,5 +30,25 @@ function milestone1() {
 // Potete ad esempio provare ad usare questo programma per inserire N voti di scuola e farvi restituire qual è la media di tutti i voti inseriti!
 
 function milestone2() {
-    
+
+}
+
+
+
+
+// Functions //
+
+/**
+ * Prende un'array e calcola la somma dei numeri presenti in essa.
+ *
+ * @param {Array<Number>} array - L'array da cui calcolare la somma dei numeri.
+ * @returns {Number} La somma dei numeri nell'array.
+ */
+function sommaNumeri(array) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        const number = array[i];
+        sum += number;
+    }
+    return sum;
 }
